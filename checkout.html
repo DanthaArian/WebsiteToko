@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Toko Baju Dante</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Toko</span> Pakaian</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="checkout">
+        <div class="container">
+            <h1>Checkout</h1>
+            <div id="product-details">
+            </div>
+            <form action="order_confirmation.html" method="POST">
+                <div class="form-group inline">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group inline">
+                    <label for="address">Alamat:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group inline">
+                    <label for="city">Kota:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group inline">
+                    <label for="postalcode">Kode Pos:</label>
+                    <input type="number" id="postalcode" name="postalcode" required>
+                </div>
+                <button type="submit" class="btn">Konfirmasi Pesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Toko Baju Dante &copy; 2024</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // JavaScript to handle URL parameters and display product details
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init();
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('product');
+            
+            const products = {
+                "1": {
+                    name: "Baju Hitam Polos",
+                    price: "Rp.250.000",
+                    description: "Kualitas yang tinggi",
+                    image: "product1.jpg"
+                },
+                "2": {
+                    name: "Celana Premium",
+                    price: "Rp.300.000",
+                    description: `
+                        <p>Celana ini terbuat dari bahan katun premium dengan campuran sedikit elastane, memberikan kenyamanan maksimal dan fleksibilitas saat dipakai. Tekstur bahan lembut di kulit namun tetap kuat dan tahan lama.</p>
+                        <p>Desain modern dan stylish cocok untuk berbagai kesempatan, baik formal maupun kasual. Potongan slim-fit atau straight-fit yang memberikan tampilan rapi dan elegan. Dilengkapi dengan kancing dan ritsleting berkualitas tinggi yang mudah digunakan dan tahan lama.</p>
+                        <p>Kenyamanan Optimal: Bahan yang breathable sehingga nyaman dipakai sepanjang hari. Perawatan Mudah: Bahan yang mudah dicuci dan tidak mudah kusut, sehingga tetap terlihat baru meskipun sering digunakan. Detail Tambahan: Kantong depan dan belakang yang cukup dalam, ideal untuk menyimpan barang-barang penting seperti ponsel dan dompet. Keawetan: Jahitan yang kuat dan rapi memastikan celana ini tahan lama meskipun sering dipakai dan dicuci.</p>
+                        <p>Celana ini cocok untuk Anda yang membutuhkan pakaian yang tidak hanya stylish tetapi juga fungsional dan nyaman. Ideal untuk digunakan ke kantor, acara formal, maupun aktivitas sehari-hari.</p>`,
+                    image: "product2.png"
+                },
+                "3": {
+                    name: "Jas Wedding Edisi Spesial",
+                    price: "Rp.500.000",
+                    description: "Kualitas yang tinggi geh beli mang",
+                    image: "product3.jpg"
+                },
+                "4": {
+                    name: "Baju Putih Polos",
+                    price: "Rp.300.000",
+                    description: "Kualitas yang tinggi geh beli mang",
+                    image: "product4.jpg"
+                },
+                "5": {
+                    name: "Baju Merah Maroon",
+                    price: "Rp.300.000",
+                    description: "Kualitas yang tinggi geh beli mang",
+                    image: "product5.jpg"
+                },
+                "6": {
+                    name: "Celana Kargo Lepis",
+                    price: "Rp.400.000",
+                    description: "Kualitas yang tinggi geh beli mang",
+                    image: "product6.jpg"
+                },
+            };
+
+            if (products[productId]) {
+                const product = products[productId];
+                document.getElementById('product-details').innerHTML = `
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p class="price">${product.price}</p>
+                    </div>
+                `;
+            } else {
+                document.getElementById('product-details').innerHTML = `
+                    <p>Produk tidak ditemukan</p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
