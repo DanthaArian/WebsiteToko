@@ -1,55 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Baju Dante</title>
+    <title>Halaman Seminar</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <div class="container" data-aos=->
-            <div id="branding">
-                <h1><span class="highlight">Toko</span> Pakaian</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Seminar</a></li>
+                <li><a href="#speakers">Pembicara</a></li>
+                <li><a href="#schedule">Lomba</a></li>
+            </ul>
+        </nav>
     </header>
-    <marquee behavior="scroll" direction="left" data-aos="fade-left">Diskon besar-besaran untuk semua produk selama bulan ini! Jangan sampai ketinggalan!</marquee>
-    <section id="showcase" data-aos="fade-up" data-aos-duration="1000">
-        <div class="container">
-            <h1>Selamat Datang di Toko Pakaian Dante</h1>
-            <p>Kami menawarkan pakaian dengan kualitas tinggi, dan tentu dengan harga terjangkau.</p>
+
+    <section id="home" class="section">
+        <img src="img/pam1.jpeg" alt="Pamplet">
+        <p>Chemistry euphoria merupakan kegiatan dari program studi S1-Kimia Fakultas Matematika dan Ilmu Pengetahuan Alam Universitas Bengkulu dalam menyambut dan memeriahkan hari ulang tahun Prodi kimia yang ke-23 tahun pada September tahun 2024 tempatnya pada tanggal 3 September 2024. Kegiatan ini diselenggarakan Oleh Himpunan Mahasiswa Kimia yang berkolaborasi dengan dosen-dosen di program studi S1-Kimia. Adapun beberapa kegiatan yang Akan diselenggaran dalam acara ini yaitu Seminar Nasional Online dan berbagai Perlombaan. SEE YOU ON SEPTEMBER IN CHEMISTRY EUPHORIA</p>
+
+    </section>
+
+
+
+
+    <section id="about" class="section">
+        <h2>Seminar nasional</h2>
+        <p>Seminar Nasional merupakan acara yang diselenggarakan oleh Program Studi S1-Kimia Fakultas Matematika dan Ilmu Pengetahuan Alam Universitas Bengkulu. Seminar ini diadakan untuk mendorong Ilmu pengetahuan dan kemajuan kecerdasan terutama di bidang sains tepatnya Ilmu Kimia. Seminar Nasional ini diadakan untuk para peneliti,akademika,dan pakar-pakar dalam bidang sains terutama Ilmu kimia untuk bertukar dan meningkatkan ide pikirannya agar lebih inovatif,kreatif,dan kolaboratif. Acara seminar ini akan dilaksanakan pada tanggal 30 September 2024. Dengan mengangkat beberapa topik tentang Ilmu kimia</p>
+        <p>Topik: </p>
+        <p>1. Biokimia</p>
+        <p>2. Kimia analisis modern</p>
+        <p>3. Kimia organik</p>
+        <p>4. Kimia anorganik</p>
+        <p>5. Kimia fisik</p>
+        <p>6. Kimia Lingkungan</p>
+        <p>7. Kimia terapan</p>
+    </section>
+
+    <section id="speakers" class="section">
+        <h2>Opening</h2>
+        <div class="speaker">
+            <img src="img/intro.jpeg" alt="Pembicara 1">
+            <h3>Prof. Dr. Sal Prima Yudha,S.Si.,M.Si</h3>
+        <p>Dekan Fakultas Matematika dan Ilmu Pengetahuan Alam </p>
+            <p>Universitas Bengkulu</p>
+        </div>
+        <h2>Keynote Speakers</h2>
+        <div class="speaker">
+            <img src="img/img2.jpeg" alt="Pembicara 2">
+            <h3>Prof. Hermansyah,S.Si.,M.Si.,Ph.D</h3>
+            <p>Kimia</p>
+            <p>Universitas Srawijaya</p>
+        </div>
+        <div class="speaker">
+            <img src="img/img1.jpg" alt="Pembicara 3">
+            <h3>Dr.Ir Grandprix Thomryes Marth Kadja,M.Si</h3>
+            <p>Kimia</p>
+            <p>Institut Teknologi Bandung</p>
+        </div>
+
+        <h2>Invite Speaker</h2>
+
+        <div class="speaker">
+            <img src="img/invited1.jpeg" alt="Pembicara 4">
+            <h3>Ashadi Sasongko</h3>
+            <p>Dosen Teknik Kimia</p>
+            <p>Institut Teknologi Kalimantan</p>
+        </div>
+        <div class="speaker">
+            <img src="img/invited5.jpeg" alt="Pembicara 5">
+            <h3>Aswin Falahudin,S.Si, M.Si, Ph.</h3>
+            <p>Kimia </p>
+            <p>Chulalongkorn University,Thailand</p>
+        </div>
+        <div class="speaker">
+            <img src="img/invited3.jpeg" alt="Pembicara 6">
+            <h3>Dr. Dwita Oktiarni,S.Si.,M.Si
+            <p>Dosen Kimia FMIPA</p>
+            <p>Universitas Bengkulu</p>
+        </div>
+        <div class="speaker">
+            <img src="img/invited4.jpeg" alt="Pembicara 7">
+            <h3>Dr. Teja Dwi Sutanto S.Si.,M.Si</h3>
+            <p>Dosen Kimia FMIPA</p>
+            <p>Universitas Bengkulu</p>
+        </div>
+
+
+
+        <div class="regis">
+            <h3>Registrasi:</h3>
+            <p>Open registrasi (5 Agustus)</p>
+            <p>Close registrasi (10 September)</p>
+            <p>Penutupan Pengumpulan full paper (15 September)</p>
+            <p>Seminar Nasional (30 September)</p>
+        </div>
+        <div class="regis">
+        <p>Price:
+            <p>Mahasiswa: Rp.50.000</p>
+            <p>Non mahasiswa: Rp. 100.000</p>
+            <p>BRI 558001019806537</p>
+            <p>a.n ZAHRA KAMILA RAHMA</p>
+        </div>
+        <div style="margin-top: 20px;">
+            <a href="https://docs.google.com/forms/d/1yroNvS-stQqcA9AWr9uDZGGJnvIKNlOcsso2LG7Nhp4/edit?usp=drivesdk" class="button-home">Daftar Seminar</a>
+            <a href="https://drive.google.com/drive/folders/1GVNOI-BaaTs-hxxXccL-ZtChNmToVGAr" class="button-home">Format Abstract</a>
         </div>
     </section>
 
-    <div class="container">
-        <section class="products" data-aos="fade-down" data-aos-duration="1000">
-            <div class="product" data-aos="fade-right">
-                <img src="product1.png" alt="Product 1">
-                <h3>Baju Hitam Polos</h3>
-                <p>Kualitas yang tinggi</p>
-            </div>
-            
-            <h2>Klik <a href="products.html">Products</a> untuk melihat produk lebih lanjut</h2>
-        </section>
-    </div>
+    
 
-    <footer data-aos=->
-        <p>Toko Pakaian Dante &copy; 2024</p>
-    </footer>
+    <section id="schedule" class="section">
+        <h2>Perlombaan Chemistry euphoria</h2>
+        <p>Chemistry euphoria merupakan acara yang diadakan Oleh Himpunan Mahasiswa Kimia (HIMAKIM) Program Studi S1-Kimia Fakultas Matematika dan Ilmu Pengetahuan Alam Universitas Bengkulu untuk menyambut Anniversary HIMAKIM yang ke-23. Dalam acara ini Ada beberapa Perlombaan yang diadakan,baik itu secara Nasional ataupun se Provinsi Bengkulu. Perlombaan chemistry euphoria ini akan diadakan Pada bulan September dan telah dibuka pendaftarannya. Adapun beberapa cabang lomba yang diadakan Pada Chemistry euphoria ini</p>
+        <div class="cabang">
+            <p>Cabang lomba:</p>
+            <p>1. Karya Tulis Ilmiah (Nasional)</p>
+            <p>2. Poster Ilmiah (Nasional)</p>
+            <p>3. Solo song (se-provinsi Bengkulu)</p>
+            <p>4. Dance (se-provinsi Bengkulu)</p>
+            <p>5. E-sport Ml (se-provinsi Bengkulu)</p>
+        </div>
+        <div style="margin-top: 20px;">
+        <a href="https://bit.ly/45Sqvy0" class="button">Guidebook Lomba</a>
+        <a href="https://forms.gle/T5cto86rjAcimYx96" class="button">Daftar Lomba</a>
+        </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
